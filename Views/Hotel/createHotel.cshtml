@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewData["Title"] = "Create Hotel";
+}
+
+<h1>Create Hotel</h1>
+
+@using (Html.BeginForm("Create", "Hotel", FormMethod.Post)){
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="Name">
+    </div>
+    <div class="form-group">
+        <label for="rooms">Rooms</label>
+        <input type="number" class="form-control" id="rooms" name="Rooms">
+    </div>
+    <div class="form-group">
+        <label for="description">Description</label>
+        <textarea class="form-control" id="description" name="Description"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="location">Location</label>
+        <input type="text" class="form-control" id="location" name="Location">
+    </div>
+    <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="text" class="form-control" id="phone" name="Phone">
+    </div>
+    <div class="form-group">
+        <label for="rating">Rating</label>
+        <input type="number" class="form-control" id="rating" name="Rating">
+    </div>
+    <div class="form-group">
+        <label for="imgURL">Image URL</label>
+        <input type="text" class="form-control" id="imgURL" name="imgUrl">
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+}
+<style>
+    label{
+        color:white;
+    }
+
+    h1{
+        color:white;
+    }
+</style>

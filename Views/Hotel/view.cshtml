@@ -1,0 +1,48 @@
+﻿@model Hotels.Models.Hotel
+
+@{
+    ViewData["Title"] = "Hotel Information";
+}
+<div class="hotel-page">
+    <div class="hotel-info">
+        <h1>@Model.Name</h1>
+        <h3>@Model.Description</h3>
+        <p><strong>Location:</strong> @Model.location</p>
+        <p><strong>Number of Rooms:</strong> @Model.rooms</p>
+        <p><strong>Phone:</strong> @Model.phone</p>
+    </div>
+    <div class="hotel-image">
+        <img src="@Model.imgUrl" alt="@Model.Name">
+    </div>
+</div>
+
+<style> 
+    .hotel-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+.hotel-info {
+    width: 50%;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.hotel-image {
+    width: 50%;
+    height: 50%;
+    overflow: hidden;
+}
+
+.hotel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+h1,h3,p {
+    color: white;
+}
+
+</style>
